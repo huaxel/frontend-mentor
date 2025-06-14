@@ -21,9 +21,9 @@ body {
 
 #container {
   border-radius: 1rem;
-  padding: 1rem 1rem 1.4rem;
+  padding: 1rem 1rem 2rem;
   background-color: var(--white);
-  max-width: 300px;
+  max-width: 290px;
   margin: 0 auto;
   text-align: center;
 }
@@ -31,7 +31,7 @@ body {
 img {
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: .7rem;
 }
 h1 {
   font-size: 1.5rem;

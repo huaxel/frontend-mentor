@@ -1,0 +1,30 @@
+name: Deploy All Projects to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 📂 Copy all subprojects
+        run: |
+          mkdir publish
+          for dir in */; do
+            # Skip .github or any other non-project folders
+            if [[ "$dir" != ".github/" ]]; then
+              mkdir -p "publish/$dir"
+              cp -r "$dir"* "publish/$dir"
+            fi
+          done
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./publish
