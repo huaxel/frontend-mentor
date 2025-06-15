@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Figtree Italic";
+  src: url("assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+  font-size: 16px;
+  font-family: "Figtree";
+  --font-weight-1: 500;
+  --font-weight-2: 800;
+  --text-preset-1: normal 800 1.5rem/1.5 "Figtree", sans-serif;
+  --text-preset-2: normal 500 1rem/1.5 "Figtree", sans-serif;
+  --text-preset-3: normal 500 0.875rem/1.5 "Figtree", sans-serif;
+  --text-preset-3-bold: normal 800 0.875rem/1.5 "Figtree", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  width: clamp(20rem, 87.2vw, 24rem);
+  height: fit-content;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  
+  background-color: white;
+  color: var(--gray-950);
+  border-radius: 20px;
+  outline: 1px solid var(--gray-950);
+  box-shadow: 8px 8px 0 0 black;
+}
+
+figure > img {
+  display: block;
+  border-radius: 10px;
+  width: auto;
+  height: 200px;
+  background-color: var(--yellow);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.category {
+  background-color: var(--yellow);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font: var(--text-preset-3-bold);
+}
+
+time {
+  font: var(--text-preset-3);
+}
+
+h1 {
+  font: var(--text-preset-1);
+  width: 100%;
+}
+h1 a {
+  text-decoration: none;
+  color: var(--gray-950);
+}
+
+h1 a:active,
+h1 a:hover,
+h1 a:focus {
+  color: var(--yellow);
+}
+
+.description {
+  font: var(--text-preset-2);
+}
+
+.author-info {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  align-items: center;
+  font: var(--text-preset-3-bold);
+}
+
+.author-info img {
+  width: 2rem;
+  height: auto;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  color: var(--gray-500);
+  font-size: 0.7rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--gray-950);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 400) {
+  article {
+    width: 20.5rem;
+  }
+}
