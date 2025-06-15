@@ -31,7 +31,7 @@ body {
 img {
   width: 100%;
   height: auto;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
 }
 h1 {
   font-size: 1.5rem;
@@ -44,9 +44,10 @@ p {
   color: gray;
 }
 .attribution {
+  position: absolute;
+  bottom: 2rem;
   font-size: 0.8rem;
   text-align: center;
-  margin-top: 1rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
