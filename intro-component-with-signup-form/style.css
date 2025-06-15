@@ -150,18 +150,18 @@ input::placeholder {
   font-weight: var(--fw-400);
 }
 
-input + span.error-icon {
+span.error-icon {
   position: absolute;
   right: 4em;
   padding-top: 1.25em;
 }
 
-input + span.error-icon img {
+span.error-icon img {
   height: 1em;
   width: 1em;
 }
 
-input ~ span.error-message {
+span.error-message {
   position: relative;
   display: block;
   width: 100%;
