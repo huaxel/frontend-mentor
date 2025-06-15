@@ -131,9 +131,3 @@ h1 a:focus {
   text-decoration: none;
   cursor: pointer;
 }
-
-@media (max-width: 400) {
-  article {
-    width: 20.5rem;
-  }
-}
