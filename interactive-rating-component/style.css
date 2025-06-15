@@ -1,0 +1,186 @@
+/* basic variables and resets */
+:root {
+  --clr-orange-500: 25, 97%, 53%;
+  --clr-white: 0 100% 100%;
+  --clr-gray-500: 217 12% 63%;
+  --clr-gray-900: 213 19% 18%;
+  --clr-gray-950: 216 12% 8%;
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+body,
+html {
+  line-height: 1.6;
+  min-height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+image,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.hidden {
+  display: none;
+}
+/* general setup */
+body {
+  background-color: hsl(var(--clr-gray-950));
+  color: hsl(var(--clr-white));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: hsl(var(--clr-gray-900));
+  width: clamp(10rem, 27.5rem, 27.5rem);
+  height: auto;
+  padding: 2.1rem;
+  border-radius: 2rem;
+  gap: 2rem;
+}
+
+/* rating state */
+.rating-icon {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+fieldset {
+  border: none;
+  width: 100%;
+}
+.rating-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  color: hsl(var(--clr-gray-500));
+  transition: background-color 0.3s, color 0.3s;
+}
+
+label:hover .custom-radio{
+  background-color: hsl(var(--clr-orange-500));
+  color: hsl(var(--clr-gray-950));
+}
+
+input[type="radio"]:checked + .custom-radio {
+  background-color: hsl(var(--clr-white)); 
+  color: hsl(var(--clr-gray-950));
+}
+
+h1 {
+  font-size: 1.95rem;
+  font-weight: var(--fw-400);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: hsl(var(--clr-orange-500));
+  color: hsl(var(--clr-gray-950));
+
+  text-align: center;
+  height: 45px;
+  width: 98%;
+
+  border-radius: 2rem;
+  align-self: center;
+
+  font-weight: var(--fw-700);
+  letter-spacing: 0.2ch;
+}
+
+button:focus,
+button:active,
+button:hover {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-gray-950));
+}
+/* thank you */
+.thank-you{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-rating{
+  border-radius: 2rem; 
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: .5rem 2rem; 
+}
+/* footer */
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.8rem;
+  color: hsl(var(--clr-white));
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(var(--clr-orange-500));
+}
