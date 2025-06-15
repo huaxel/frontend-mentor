@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const errorIcon = document.createElement("span");
     errorIcon.setAttribute("data-id", name);
     errorIcon.classList.add("error-icon");
-    errorIcon.innerHTML = "<img src='images/icon-error.svg' alt=''>";
+    errorIcon.innerHTML = "<img src='images/icon-error.svg' alt='error icon'>";
 
     // error message.
     const errorMessage = document.createElement("span");
@@ -30,9 +30,8 @@ window.addEventListener("DOMContentLoaded", () => {
       : `Looks like this is not a valid ${placeholder.toLowerCase()}.`;
 
     // Append error icon and message after input element
-    e.target.after(errorMessage);
     e.target.after(errorIcon);
-
+    errorIcon.after(errorMessage);
     // Add error class to input to change border color
     e.target.classList.add("error");
   }
