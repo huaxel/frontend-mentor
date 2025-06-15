@@ -15,6 +15,7 @@ jobs:
       - name: 📂 Copy all subprojects
         run: |
           mkdir publish
+          cp index.html publish/
           for dir in */; do
             # Skip .github, publish, or any other non-project folders
             if [[ "$dir" != ".github/" && "$dir" != "publish/" ]]; then
