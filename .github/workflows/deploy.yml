@@ -16,8 +16,8 @@ jobs:
         run: |
           mkdir publish
           for dir in */; do
-            # Skip .github or any other non-project folders
-            if [[ "$dir" != ".github/" ]]; then
+            # Skip .github, publish, or any other non-project folders
+            if [[ "$dir" != ".github/" && "$dir" != "publish/" ]]; then
               mkdir -p "publish/$dir"
               cp -r "$dir"* "publish/$dir"
             fi
